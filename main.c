@@ -212,6 +212,9 @@ int main(int argc, char** argv) {
 		vkGetDeviceQueue(vk_device, vk_queue_family_idx, 0, &vk_queue);
 	}
 
+	//
+	// load the shader that has been modified to not crash
+	//
 	{
 		void* code;
 		uintptr_t code_size;
@@ -228,6 +231,9 @@ int main(int argc, char** argv) {
 		APP_VK_ASSERT(vkCreateShaderModule(vk_device, &create_info, NULL, &vk_shader_module));
 	}
 
+	//
+	// load the shader that will cause the crash
+	//
 	{
 		void* code;
 		uintptr_t code_size;
