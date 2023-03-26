@@ -17,7 +17,7 @@ In **shader-broken.spirv**, the **OpVariable** with a **Output** storage class a
 %40 = OpVariable %_ptr_Output__struct_39 Output
 ```
 
-This does work when i use Linux on the same machine, so it is something specific to the AMD Vulkan driver for Windows.
+This does work when i use Linux on the same machine, so it is something specific to the AMD Vulkan driver for Windows 11.
 
 I have not seen any other compiler (such as dxc or glslc) that uses structure types in **OpVariable** with **Output** or **Input** storage classes but the SPIR-V spec does support it.
 
